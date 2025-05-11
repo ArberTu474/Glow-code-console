@@ -1,0 +1,9 @@
+  /////////////////////////////////////////////////
+ ///           Day 3 -- Exercise 1             ///
+/////////////////////////////////////////////////
+
+// Use a for loop to print "Hello World" 10 times.
+
+function d3ex1() {
+  displayLn('Exercise 1')
+}
