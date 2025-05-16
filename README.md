@@ -1,53 +1,48 @@
 # Console Structure
 
-This is a simple website for the girls to experiment with javaScript and to be able to run their exercises during th camp.
+This is a simple website for the girls to experiment with JavaScript and to be able to run their exercises during the camp.
 
 ## How it works
 
-Under `exercises` directory we can add `.js` files that contain a function, for example `ex1`, `ex2` etc.
-If you want to run a specific exercise to the console you can open the `runExercise.js` file and pass the name of the exercise as the parameter of the function `runExercise()`. Like so:
+The file `playground.js` is the file where the girls are going to run their experimental code. During each day of the camp are going to complete exercises for each topic. Inside the `exercises/` folder there are JavaScript files for each exercise, so at the end of the camp each girl can have a copy of their work.
+
+It is recommended to use VS Code with the `Live Server` extension, so girls can get live updates. You can run each exercise by selecting it on the left side of the screen and clicking run on the top right of the screen.
+
+## Features & Methods
+
+You can write JavaScript code without any limitations inside each exercise, but you should use a different method if you want to use `console.log()`.
+
+There are 2 methods that you can use: `display()` and `displayLn()`. It is recommend to use `displayLn()`, because it adds an new line at the end, but `display()` has it's uses as well.
+
+You can pass multiple arguments to these functions and they automatically join your arguments with a space in between. For example:
 
 ```js
-function runExercise(exercise) {
-  printPromt()
-
-  exercise()
-}
-
-runButton.addEventListener('click', () => {
-  runExercise(ex1) // <-- Change it to `ex2` if you want to run exercise 2
-})
+displayLn('hello', 'world')
 ```
 
-After this setup, open the website in the browser and hit the `Run` button in the top right corner.
+output
 
-## Fetures & Methods
+```sh
+hello world
+```
 
-Inside the `scripts.js` file there are some predefined functions
+## Additional Features
 
-- `clearTerminal()`: Clears the terminal screen
-- `display(...messages)`: Prints a message without going to a new line
-- `displayLn(...messages)` Prints a message and goes to a new line
-- `printPromt()` This functions runs every time you press `Run`. You can use it to print ascii art as the promt of the terminal or just text. If you leave the body of the function empty, it will not print a promt.There are some examples commented out in the `scripts.js` file.
+You can customize the console prompt as well. To do so edit the `printPrompt()` function inside the [scripts.js](src/scripts.js). It is recommenced to use the default prompt because it is simpler and less distracting for the girls. 
 
-  For example:
+### Some build-in prompts
 
-  ```
-  ╭─ GLOW Code:
-  ╰─ Hello World
-  ```
+```
+╭─ GLOW Code:
+╰─ Hello World
+```
 
-  ```
-  (\_/)
-  (•.•)
-  />  Hello World
-  ```
+```
+(\_/)
+(•.•)
+/>  Hello World
+```
 
-  ```
-  GLOW Code>>> Hello World
-  ```
-
-- You can change the theme of the terminal by moving the silder next to the clear button. But if you want to make permanent changes to your theme you can edit the `--hue` css variable inside the `styles.css` file. Make sure to put a number between `0` and `360`.
-
-> [!WARNING]
-> Setting the theme this way is just a workaround. Maybe in future versions you won't need to change the `styles.css` file.
+```
+GLOW Code>>> Hello World
+```

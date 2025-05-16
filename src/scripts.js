@@ -31,7 +31,8 @@ function displayLn(...messages) {
 function printPrompt() {
   // display('(\\_/)\n(•.•)\n/>  ')
   // display('\n╭─ GLOW Code: \n╰─ ')
-  displayLn('') // default prompt. Prints a new line or every execution
+  // display('GLOW Code>>> ')
+  displayLn('') // default prompt. Prints a new line on every execution
 }
 
 clearButton.addEventListener('click', () => {
@@ -61,14 +62,12 @@ const exercises = document.querySelectorAll('.exercise')
 
 // Run when page loads
 window.addEventListener('DOMContentLoaded', () => {
-  
   const exerciseNumber = getCookie('exerciseNumber')
   const terminalHue = getCookie('terminalHue')
 
   setTerminalHue(terminalHue)
 
   exercises.forEach((exercise) => {
-
     if (exercise.dataset.exercise === exerciseNumber) {
       exercise.classList.add('selected')
     }

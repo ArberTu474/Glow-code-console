@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon" />
 
     <title>GLOW Code Console</title>
   </head>
@@ -64,6 +64,7 @@
 
       <div class="main-container">
         <div class="exercises-container">
+          <button class="btn exercise" data-exercise="12">Playground</button>
           <div class="divider">Day 1</div>
           <button class="btn exercise" data-exercise="1">Exercise 1</button>
           <button class="btn exercise" data-exercise="2">Exercise 2</button>
@@ -83,6 +84,7 @@
       </div>
     </div>
     <!-- Import Exercises -->
+    <script src="playground.js"></script>
     <script src="exercises/day_1/ex1.js"></script>
     <script src="exercises/day_1/ex2.js"></script>
 
@@ -97,9 +99,8 @@
     <script src="exercises/day_3/ex5.js"></script>
     <script src="exercises/day_3/ex6.js"></script>
 
-
     <!-- Terminal scripts -->
-    <script src="scripts.js"></script>
-    <script src="runExercise.js"></script>
+    <script src="src/scripts.js"></script>
+    <script src="src/runExercise.js"></script>
   </body>
 </html>
